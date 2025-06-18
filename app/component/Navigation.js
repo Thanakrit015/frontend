@@ -15,7 +15,7 @@ export default function Navigation() {
 
   return (
     <nav style={{
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      background: 'linear-gradient(135deg, #ffeef8 0%, #f8d7da 50%, #e6b3ba 100%)',
       padding: '1rem 2rem',
       boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
       position: 'sticky',
@@ -34,10 +34,10 @@ export default function Navigation() {
         <div style={{
           fontSize: '1.5rem',
           fontWeight: 'bold',
-          color: 'white',
-          textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+          color: '#8b5a6b',
+          textShadow: '2px 2px 4px rgba(139,90,107,0.3)'
         }}>
-          ⚽Thanakrit 015
+          ✨ MyWebsite
         </div>
 
         {/* Navigation Links */}
@@ -59,19 +59,19 @@ export default function Navigation() {
                   alignItems: 'center',
                   gap: '0.5rem',
                   padding: '0.75rem 1.5rem',
-                  color: 'white',
+                  color: '#8b5a6b',
                   textDecoration: 'none',
                   borderRadius: '50px',
                   background: activeItem === item.href 
-                    ? 'rgba(255,255,255,0.2)' 
-                    : 'transparent',
+                    ? 'rgba(199, 125, 148, 0.3)' 
+                    : 'rgba(139, 90, 107, 0.1)',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   transform: activeItem === item.href ? 'translateY(-2px)' : 'translateY(0)',
                   boxShadow: activeItem === item.href 
                     ? '0 8px 25px rgba(0,0,0,0.15)' 
                     : '0 2px 10px rgba(0,0,0,0.05)',
                   backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(199, 125, 148, 0.2)',
                   fontWeight: '500',
                   fontSize: '0.95rem',
                   position: 'relative',
@@ -85,7 +85,7 @@ export default function Navigation() {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  background: 'linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
+                  background: 'linear-gradient(45deg, rgba(199, 125, 148, 0.15), rgba(139, 90, 107, 0.08))',
                   opacity: activeItem === item.href ? 1 : 0,
                   transition: 'opacity 0.3s ease',
                   zIndex: -1
@@ -117,7 +117,7 @@ export default function Navigation() {
                   width: '0',
                   height: '0',
                   borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.3)',
+                  background: 'rgba(199, 125, 148, 0.4)',
                   transform: 'translate(-50%, -50%)',
                   transition: 'width 0.6s, height 0.6s',
                   ...(activeItem === item.href && {
@@ -138,9 +138,9 @@ export default function Navigation() {
           }
         }}>
           <button style={{
-            background: 'rgba(255,255,255,0.2)',
+            background: 'rgba(199, 125, 148, 0.3)',
             border: 'none',
-            color: 'white',
+            color: '#8b5a6b',
             padding: '0.5rem',
             borderRadius: '8px',
             cursor: 'pointer',
@@ -157,7 +157,7 @@ export default function Navigation() {
         bottom: 0,
         left: 0,
         height: '3px',
-        background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4)',
+        background: 'linear-gradient(90deg, #ffb3d1, #ffc0cb, #f8bbd9, #e6b3c7)',
         backgroundSize: '300% 100%',
         animation: 'gradient 3s ease infinite',
         width: '100%'
