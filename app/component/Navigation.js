@@ -37,7 +37,7 @@ export default function Navigation() {
           color: 'white',
           textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
         }}>
-          ✨ MyWebsite
+          ⚽Thanakrit 015
         </div>
 
         {/* Navigation Links */}
