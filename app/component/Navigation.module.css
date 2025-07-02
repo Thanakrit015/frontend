@@ -1,0 +1,84 @@
+.navbar {
+  background-color: #fef6fb; /* pastel pink */
+  border-bottom: 1px solid #f0e1ea;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap; /* ให้แถวใหม่เมื่อเกินความกว้าง */
+  gap: 0.75rem; /* เว้นช่องว่างระหว่างเมนู */
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.brand {
+  font-weight: bold;
+  color: #e195b7;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.brand:hover {
+  color: #d679a7;
+  text-decoration: none;
+}
+
+.link {
+  color: #888;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.link:hover {
+  color: #fff;
+  background-color: #e9b8d4;
+}
+
+.active {
+  color: #fff;
+  background-color: #e195b7;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  border-radius: 10px;
+  border: 1px solid #e195b7;
+  background-color: #fff0f7;
+  color: #555;
+}
+
+.searchBtn {
+  background-color: #e195b7;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.searchBtn:hover {
+  background-color: #d679a7;
+}
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column; /* ซ้อนเมนูลงมาเป็นคอลัมน์ */
+  }
+}
+.nav-item {
+    width: 100%; /* ให้เมนูเต็มความกว้าง */
+  }
+  .nav-link {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    display: block;
+    border-radius: 12px;
+  }

@@ -1,40 +1,70 @@
-// app/components/navigation.js
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import styles from './Navigation.module.css';
 
 export default function Navigation() {
-  const [activeItem, setActiveItem] = useState('');
+  const pathname = usePathname();
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon" />
-    </button>
-    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a className="navbar-brand" href="#">Hidden brand</a>
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/about">about</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/contact">contact</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/service">service</a>
-        </li>
-      </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+    <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
+      <div className="container-fluid">
+        <Link href="/" className={`navbar-brand ${styles.brand}`}>MyBrand</Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link
+                href="/"
+                className={`nav-link ${pathname === '/' ? styles.active : styles.link}`}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                href="/about"
+                className={`nav-link ${pathname === '/about' ? styles.active : styles.link}`}
+              >
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                href="/contact"
+                className={`nav-link ${pathname === '/contact' ? styles.active : styles.link}`}
+              >
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                href="/service"
+                className={`nav-link ${pathname === '/service' ? styles.active : styles.link}`}
+              >
+                Service
+              </Link>
+            </li>
+          </ul>
 
+          <form className={`d-flex ${styles.searchForm}`} role="search">
+            <input
+              className={`form-control me-2 ${styles.searchInput}`}
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className={`btn ${styles.searchBtn}`} type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
   );
 }
