@@ -148,7 +148,7 @@ export default function Navigation() {
           </div>
           {/* 👇 เพิ่มปุ่ม Login ตรงนี้ */}
           <Link href="/login" className={styles.loginButton}>
-            Login
+            LOGIN
           </Link>
         </div>
       </div>

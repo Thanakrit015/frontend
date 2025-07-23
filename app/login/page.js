@@ -418,10 +418,11 @@ export default function Home() {
                     padding: 12px 15px 12px 45px;
                     border-radius: 8px;
                     background-color: var(--input-bg);
-                    border: 2px solid var(--border-color);
+                    border: 2px solid #FF69B4; /* 🔴 เปลี่ยนเป็นกรอบชมพูทั้งหมด */
                     color: var(--text-color-light);
                     transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
                 }
+
 
                 .input-group input:focus,
                 .input-group select:focus,
@@ -438,12 +439,27 @@ export default function Home() {
 
                 .input-group select {
                     appearance: none;
-                    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23aaa%22%20d%3D%22M9.293%2012.95l.707.707L15.657%208l-1.414-1.414L10%2010.828l-4.243-4.242L4.343%208z%22%2F%3E%3C%2Fsvg%3E');
+                    background-color: #1f1f1f; /* สีพื้นหลัง dropdown ให้ contrast */
+                    color: #ffffff; /* สีตัวอักษร */
+                    border: 2px solid #FF69B4; /* สีขอบชมพูชัดเจน */
+                    padding: 12px 15px 12px 45px;
+                    padding-right: 35px; /* เผื่อพื้นที่ให้ไอคอนลูกศร */
+                    border-radius: 8px;
+                    font-weight: 500;
+                    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    
+                    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M9.293%2012.95l.707.707L15.657%208l-1.414-1.414L10%2010.828l-4.243-4.242L4.343%208z%22/%3E%3C/svg%3E');
                     background-repeat: no-repeat;
                     background-position: right 15px center;
                     background-size: 1em;
-                    padding-right: 35px; /* เพิ่มพื้นที่สำหรับ icon arrow */
                 }
+
+                .input-group select:focus {
+                    border-color: var(--secondary-color); /* ใช้สีม่วง */
+                    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.4); /* เอฟเฟกต์เรืองแสง */
+                    outline: none;
+                }
+
 
                 .input-group textarea {
                     padding-top: 12px;
