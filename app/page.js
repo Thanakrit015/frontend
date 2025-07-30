@@ -6,8 +6,6 @@ export default function Home() {
   return (
     <>
     <Carousel />
-    <Card />
-    <h1>Mr.Thanakrit Kunasaengkum</h1>
     </>
   );
 }
